@@ -1,0 +1,8 @@
+# Auto-generated directories
+bin
+.settings
+.svn
+
+# Auto-generated files
+.classpath
+.project

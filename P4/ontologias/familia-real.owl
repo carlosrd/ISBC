@@ -1,0 +1,721 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns="http://www.owl-ontologies.com/Ontology1400850834.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1400850834.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="DeTrabajo">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Foto"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Mesa"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="aparece"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:hasValue>
+              <Persona rdf:ID="Mariano">
+                <sexo>
+                  <Sexo rdf:ID="ihombre"/>
+                </sexo>
+              </Persona>
+            </owl:hasValue>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#aparece"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Trabajo">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Objeto"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hijxs">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Persona"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Persona"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="esHijoDe"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Yernxs">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="casadoCon"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Persona"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#esHijoDe"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Persona"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Persona">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Sexo"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Abuelas">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="sexo"/>
+            </owl:onProperty>
+            <owl:hasValue>
+              <Sexo rdf:ID="imujer"/>
+            </owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="#Persona"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:ID="esPadreDe"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#esPadreDe"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Persona"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SobrinosDelPrincipe">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Restriction>
+                    <owl:onProperty>
+                      <owl:ObjectProperty rdf:about="#esPadreDe"/>
+                    </owl:onProperty>
+                    <owl:hasValue>
+                      <Persona rdf:ID="Felipe">
+                        <sexo rdf:resource="#ihombre"/>
+                        <esPadreDe>
+                          <Persona rdf:ID="SofiaJunior">
+                            <sexo rdf:resource="#imujer"/>
+                            <esHijoDe rdf:resource="#Felipe"/>
+                            <esHijoDe>
+                              <Persona rdf:ID="Letizia">
+                                <esPadreDe rdf:resource="#SofiaJunior"/>
+                                <esPadreDe>
+                                  <Persona rdf:ID="Leonor">
+                                    <esHijoDe rdf:resource="#Felipe"/>
+                                    <esHijoDe rdf:resource="#Letizia"/>
+                                    <sexo rdf:resource="#imujer"/>
+                                  </Persona>
+                                </esPadreDe>
+                                <casadoCon rdf:resource="#Felipe"/>
+                                <sexo rdf:resource="#imujer"/>
+                              </Persona>
+                            </esHijoDe>
+                          </Persona>
+                        </esPadreDe>
+                        <esPadreDe rdf:resource="#Leonor"/>
+                        <casadoCon rdf:resource="#Letizia"/>
+                        <esHijoDe>
+                          <Persona rdf:ID="JuanCarlos">
+                            <sexo rdf:resource="#ihombre"/>
+                            <esPadreDe>
+                              <Persona rdf:ID="Cristina">
+                                <sexo rdf:resource="#imujer"/>
+                                <esPadreDe>
+                                  <Persona rdf:ID="Irene">
+                                    <esHijoDe rdf:resource="#Cristina"/>
+                                    <esHijoDe>
+                                      <Persona rdf:ID="Undargarin">
+                                        <esPadreDe rdf:resource="#Irene"/>
+                                        <esPadreDe>
+                                          <Persona rdf:ID="Miguel">
+                                            <sexo rdf:resource="#ihombre"/>
+                                            <esHijoDe rdf:resource="#Cristina"/>
+                                            <esHijoDe rdf:resource="#Undargarin"/>
+                                          </Persona>
+                                        </esPadreDe>
+                                        <esPadreDe>
+                                          <Persona rdf:ID="Pablo">
+                                            <esHijoDe rdf:resource="#Cristina"/>
+                                            <esHijoDe rdf:resource="#Undargarin"/>
+                                            <sexo rdf:resource="#ihombre"/>
+                                          </Persona>
+                                        </esPadreDe>
+                                        <esPadreDe>
+                                          <Persona rdf:ID="Juan">
+                                            <sexo rdf:resource="#ihombre"/>
+                                            <esHijoDe rdf:resource="#Cristina"/>
+                                            <esHijoDe rdf:resource="#Undargarin"/>
+                                          </Persona>
+                                        </esPadreDe>
+                                        <sexo rdf:resource="#ihombre"/>
+                                        <casadoCon rdf:resource="#Cristina"/>
+                                      </Persona>
+                                    </esHijoDe>
+                                    <sexo rdf:resource="#imujer"/>
+                                  </Persona>
+                                </esPadreDe>
+                                <esPadreDe rdf:resource="#Miguel"/>
+                                <esPadreDe rdf:resource="#Pablo"/>
+                                <esPadreDe rdf:resource="#Juan"/>
+                                <casadoCon rdf:resource="#Undargarin"/>
+                                <esHijoDe rdf:resource="#JuanCarlos"/>
+                                <esHijoDe>
+                                  <Persona rdf:ID="Sofia">
+                                    <casadoCon rdf:resource="#Sofia"/>
+                                    <sexo rdf:resource="#imujer"/>
+                                    <esPadreDe rdf:resource="#Cristina"/>
+                                    <esPadreDe>
+                                      <Persona rdf:ID="Elena">
+                                        <sexo rdf:resource="#imujer"/>
+                                        <esPadreDe>
+                                          <Persona rdf:ID="Victoria">
+                                            <sexo rdf:resource="#imujer"/>
+                                            <esHijoDe rdf:resource="#Elena"/>
+                                            <esHijoDe>
+                                              <Persona rdf:ID="Jaime">
+                                                <sexo rdf:resource="#ihombre"/>
+                                                <esPadreDe rdf:resource="#Victoria"/>
+                                                <esPadreDe>
+                                                  <Persona rdf:ID="FelipeJunior">
+                                                    <sexo rdf:resource="#ihombre"/>
+                                                    <esHijoDe rdf:resource="#Jaime"/>
+                                                    <esHijoDe rdf:resource="#Elena"/>
+                                                  </Persona>
+                                                </esPadreDe>
+                                                <divorciadoDe rdf:resource="#Elena"/>
+                                              </Persona>
+                                            </esHijoDe>
+                                          </Persona>
+                                        </esPadreDe>
+                                        <esPadreDe rdf:resource="#FelipeJunior"/>
+                                        <divorciadoDe rdf:resource="#Jaime"/>
+                                        <esHijoDe rdf:resource="#JuanCarlos"/>
+                                        <esHijoDe rdf:resource="#Sofia"/>
+                                      </Persona>
+                                    </esPadreDe>
+                                    <esPadreDe rdf:resource="#Felipe"/>
+                                  </Persona>
+                                </esHijoDe>
+                              </Persona>
+                            </esPadreDe>
+                            <esPadreDe rdf:resource="#Elena"/>
+                            <esPadreDe rdf:resource="#Felipe"/>
+                            <casadoCon rdf:resource="#Sofia"/>
+                          </Persona>
+                        </esHijoDe>
+                        <esHijoDe rdf:resource="#Sofia"/>
+                      </Persona>
+                    </owl:hasValue>
+                  </owl:Restriction>
+                </owl:someValuesFrom>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#esHijoDe"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#esHijoDe"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#sexo"/>
+            </owl:onProperty>
+            <owl:hasValue rdf:resource="#ihombre"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Persona"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Social">
+    <rdfs:subClassOf rdf:resource="#Objeto"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Sexo">
+    <owl:disjointWith rdf:resource="#Persona"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DomainEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Trofeo">
+    <rdfs:subClassOf rdf:resource="#Social"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Abuelos">
+    <rdfs:subClassOf rdf:resource="#Persona"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#sexo"/>
+            </owl:onProperty>
+            <owl:hasValue rdf:resource="#ihombre"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#esPadreDe"/>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="#Persona"/>
+              </owl:Restriction>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#esPadreDe"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Mesa">
+    <rdfs:subClassOf rdf:resource="#Trabajo"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Familiar">
+    <rdfs:subClassOf rdf:resource="#Foto"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#aparece"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Nietxs"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Cuñadxs">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#esHijoDe"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#esPadreDe"/>
+                </owl:onProperty>
+                <owl:someValuesFrom>
+                  <owl:Restriction>
+                    <owl:someValuesFrom rdf:resource="#Persona"/>
+                    <owl:onProperty>
+                      <owl:ObjectProperty rdf:about="#casadoCon"/>
+                    </owl:onProperty>
+                  </owl:Restriction>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#esHijoDe"/>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="#Persona"/>
+              </owl:Restriction>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#casadoCon"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Persona"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NietosDelRey">
+    <rdfs:subClassOf rdf:resource="#Persona"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#sexo"/>
+            </owl:onProperty>
+            <owl:hasValue rdf:resource="#ihombre"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#esHijoDe"/>
+                </owl:onProperty>
+                <owl:hasValue rdf:resource="#JuanCarlos"/>
+              </owl:Restriction>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#esHijoDe"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Madres">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Persona"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#esPadreDe"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:hasValue rdf:resource="#imujer"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#sexo"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Persona"/>
+  </owl:Class>
+  <owl:Class>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Mesa"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#aparece"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Padres">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#esPadreDe"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#Persona"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:hasValue rdf:resource="#ihombre"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#sexo"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Persona"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Lúdica">
+    <rdfs:subClassOf rdf:resource="#Foto"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#aparece"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Trofeo"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Nietxs">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#esHijoDe"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#esHijoDe"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#Persona"/>
+          </owl:Restriction>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Persona"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#esHijoDe">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#esPadreDe"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Persona"/>
+    <rdfs:domain rdf:resource="#Persona"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#casadoCon">
+    <rdfs:range rdf:resource="#Persona"/>
+    <rdfs:domain rdf:resource="#Persona"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#aparece">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Persona"/>
+          <owl:Class rdf:about="#Trofeo"/>
+          <owl:Class rdf:about="#Mesa"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Foto"/>
+          <owl:Class rdf:about="#DeTrabajo"/>
+          <owl:Class rdf:about="#Familiar"/>
+          <owl:Class rdf:about="#Lúdica"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#esPadreDe">
+    <owl:inverseOf rdf:resource="#esHijoDe"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="divorciadoDe">
+    <rdfs:domain rdf:resource="#Persona"/>
+    <rdfs:range rdf:resource="#Persona"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#sexo">
+    <rdfs:range rdf:resource="#Sexo"/>
+    <rdfs:domain rdf:resource="#Persona"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="urlfoto">
+    <rdfs:domain rdf:resource="#Foto"/>
+  </owl:DatatypeProperty>
+  <Foto rdf:ID="f11">
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece>
+      <Mesa rdf:ID="MesaPresidencial"/>
+    </aparece>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto11.png</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f5">
+    <aparece rdf:resource="#SofiaJunior"/>
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#Leonor"/>
+    <aparece rdf:resource="#Letizia"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto5.jpg</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f10">
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#MesaPresidencial"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto10.png</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f6">
+    <aparece rdf:resource="#Leonor"/>
+    <aparece rdf:resource="#FelipeJunior"/>
+    <aparece rdf:resource="#Victoria"/>
+    <aparece rdf:resource="#Juan"/>
+    <aparece rdf:resource="#SofiaJunior"/>
+    <aparece rdf:resource="#Pablo"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto6.jpg</urlfoto>
+    <aparece rdf:resource="#Miguel"/>
+    <aparece rdf:resource="#Irene"/>
+  </Foto>
+  <Foto rdf:ID="f19">
+    <aparece rdf:resource="#Undargarin"/>
+    <aparece rdf:resource="#Miguel"/>
+    <aparece rdf:resource="#Leonor"/>
+    <aparece rdf:resource="#FelipeJunior"/>
+    <aparece rdf:resource="#Irene"/>
+    <aparece rdf:resource="#Sofia"/>
+    <aparece rdf:resource="#Pablo"/>
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#Letizia"/>
+    <aparece rdf:resource="#SofiaJunior"/>
+    <aparece rdf:resource="#Elena"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto19.jpg</urlfoto>
+    <aparece rdf:resource="#Victoria"/>
+    <aparece rdf:resource="#Cristina"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Jaime"/>
+  </Foto>
+  <Foto rdf:ID="f13">
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto13.png</urlfoto>
+    <aparece rdf:resource="#SofiaJunior"/>
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#Leonor"/>
+    <aparece>
+      <Trofeo rdf:ID="CopaDelRey"/>
+    </aparece>
+  </Foto>
+  <Foto rdf:ID="f23">
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Letizia"/>
+    <aparece rdf:resource="#Sofia"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto23.jpg</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f3">
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#Elena"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Cristina"/>
+    <aparece rdf:resource="#Letizia"/>
+    <aparece rdf:resource="#Sofia"/>
+    <aparece rdf:resource="#Undargarin"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto3.jpg</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f12">
+    <aparece rdf:resource="#Mariano"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#MesaPresidencial"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto12.png</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f4">
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto4.jpg</urlfoto>
+    <aparece rdf:resource="#SofiaJunior"/>
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#Leonor"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Letizia"/>
+    <aparece rdf:resource="#Sofia"/>
+  </Foto>
+  <Foto rdf:ID="f22">
+    <aparece rdf:resource="#JuanCarlos"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto22.jpg</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f15">
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#Elena"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Cristina"/>
+    <aparece rdf:resource="#Letizia"/>
+    <aparece rdf:resource="#Sofia"/>
+    <aparece rdf:resource="#Jaime"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto15.jpg</urlfoto>
+  </Foto>
+  <rdf:List>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Mesa"/>
+  </rdf:List>
+  <Foto rdf:ID="f9">
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Felipe"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto9.png</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f1">
+    <aparece rdf:resource="#Miguel"/>
+    <aparece rdf:resource="#Undargarin"/>
+    <aparece rdf:resource="#Elena"/>
+    <aparece rdf:resource="#Victoria"/>
+    <aparece rdf:resource="#SofiaJunior"/>
+    <aparece rdf:resource="#Pablo"/>
+    <aparece rdf:resource="#Juan"/>
+    <aparece rdf:resource="#Cristina"/>
+    <aparece rdf:resource="#Irene"/>
+    <aparece rdf:resource="#Jaime"/>
+    <aparece rdf:resource="#FelipeJunior"/>
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Sofia"/>
+    <aparece rdf:resource="#Letizia"/>
+    <aparece rdf:resource="#Leonor"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto1.png</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f20">
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#Letizia"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto20.jpg</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f2">
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#Victoria"/>
+    <aparece rdf:resource="#SofiaJunior"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Sofia"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto2.png</urlfoto>
+    <aparece rdf:resource="#Letizia"/>
+    <aparece rdf:resource="#Miguel"/>
+    <aparece rdf:resource="#Undargarin"/>
+    <aparece rdf:resource="#FelipeJunior"/>
+    <aparece rdf:resource="#Elena"/>
+    <aparece rdf:resource="#Pablo"/>
+    <aparece rdf:resource="#Juan"/>
+    <aparece rdf:resource="#Leonor"/>
+    <aparece rdf:resource="#Cristina"/>
+    <aparece rdf:resource="#Irene"/>
+  </Foto>
+  <Foto rdf:ID="f17">
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto17.JPG</urlfoto>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#MesaPresidencial"/>
+  </Foto>
+  <Foto rdf:ID="f7">
+    <aparece rdf:resource="#Sofia"/>
+    <aparece rdf:resource="#Letizia"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Felipe"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto7.png</urlfoto>
+  </Foto>
+  <Foto rdf:ID="f16">
+    <aparece rdf:resource="#Felipe"/>
+    <aparece rdf:resource="#JuanCarlos"/>
+    <aparece rdf:resource="#Sofia"/>
+    <urlfoto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >/Users/Alvi/Desktop/FotosFamiliaReal/foto16.jpg</urlfoto>
+  </Foto>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->

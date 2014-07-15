@@ -1,0 +1,74 @@
+# los comentarios empiezan con '#'
+# la primera linea son los pesos de los atributos, el último es el peso de los roles
+# atributo 1 -> idCase
+# atributo 2 -> puntuacion
+# atributo 3 -> miCampo
+# atributo 4 -> tiempo
+# atributo 5 -> posicionPelota
+# atributo 6 -> diferenciaGoles
+# atributo 7 -> poseoPelota
+# atributo 8 -> bloqueoPorteroMio
+# atributo 9 -> bloqueoPorteroSuyo
+# atributo 10 -> misCompaneros Bot 1
+# atributo 11 -> misCompaneros Bot 2
+# atributo 12 -> misCompaneros Bot 3
+# atributo 13 -> misCompaneros Bot 4
+# atributo 14 -> misCompaneros Bot 0
+# atributo 15 -> misContrarios Bot 1
+# atributo 16 -> misContrarios Bot 2
+# atributo 17 -> misContrarios Bot 3
+# atributo 18 -> misContrarios Bot 4
+# atributo 19 -> misContrarios Bot 0
+# atributo 20 -> porteros
+# atributo 21 -> defensas
+# atributo 22 -> medios
+# atributo 23 -> delanteros
+
+
+# Portero 1 -> PorteroVertical
+# Portero 2 -> PorteroEvitaBloqueo
+# Portero 3 -> PorteroEvitaBloqueoVertical
+# Defensa 1 -> DefensaFerreo
+# Defensa 2 -> DefensaSucio
+# Defensa 3 -> GoToBall
+# Defensa 4 -> DefensaLibero
+# Medio 1 -> MedioBloqueador
+# Medio 2 -> Medio
+# Medio 3 -> Backup
+# Delantero 1 -> delantero
+# Delantero 2 -> DelanteroBloqueador
+# Delantero 3 -> BackUp2
+8.0 3.0 3.0 10.0 3.0 5.0 1.5 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0
+1 0 99 3 99 -1 99 99 99 99 99 99 99 99 99 99 99 99 99 1P1 1DE1 1DE4 1D1 1D2
+2 0 99 4 99 -1 99 99 99 99 99 99 99 99 99 99 99 99 99 1P1 1DE4 1D1 1D2 1D3
+3 0 99 99 99 1 99 99 99 99 99 99 99 99 99 99 99 99 99 1P1 1P2 1DE1 1DE4 1D1
+4 0 99 3 99 -1 99 1 99 99 99 99 99 99 99 99 99 99 99 1P2 1DE1 1DE4 1D1 1D2
+5 0 99 4 99 -1 99 1 99 99 99 99 99 99 99 99 99 99 99 1P2 1DE4 1D1 1D2 1D3
+6 0 99 1 99 1 99 1 99 99 99 99 99 99 99 99 99 99 99 1P3 1P2 1DE1 1M1 1D2
+7 0 99 99 5 99 99 99 99 99 99 99 99 99 5 7 5 7 7 1P2 1DE4 1D1 1D2 1D3
+8 0 99 99 4 99 99 99 99 99 99 99 99 99 5 7 5 7 7 1P2 1DE4 1D1 1D2 1D3
+9 0 99 99 2 99 99 99 99 99 99 99 99 99 0 2 0 2 0 1P2 1DE4 1D1 1D2 1D3
+10 0 99 99 3 99 99 99 99 99 99 99 99 99 0 2 0 2 0 1P2 1DE1 1DE2 1DE4 1M3
+11 0 -1 99 0 99 99 0 99 99 99 99 99 99 0 2 0 2 0 1P1 1P2 1DE1 1DE2 1DE4
+12 0 -1 99 2 99 99 0 99 99 99 99 99 99 0 2 0 2 0 1P1 1P2 1DE1 1DE2 1DE4
+13 -1 1 99 0 99 99 0 99 99 99 99 99 99 5 7 5 7 7 1P1 1P2 1DE1 1DE2 1DE4
+14 0 1 99 2 99 99 0 99 99 99 99 99 99 5 7 5 7 7 1P1 1P2 1DE1 1DE2 1DE4
+15 0 -1 99 0 99 99 1 99 99 99 99 99 99 0 2 0 2 0 1P3 1P2 1DE1 1DE2 1DE4
+16 0 -1 99 2 99 99 1 99 99 99 99 99 99 0 2 0 2 0 1P3 1P2 1DE1 1DE2 1DE4
+17 -1 1 99 0 99 99 1 99 99 99 99 99 99 5 7 5 7 7 1P3 1P2 1DE1 1DE2 1DE4
+18 0 1 99 2 99 99 1 99 99 99 99 99 99 5 7 5 7 7 1P3 1P2 1DE1 1DE2 1DE4
+19 0 -1 99 4 99 1 99 99 4 6 4 6 0 99 99 99 99 99 1P2 1DE4 1D1 1D2 1D3
+20 -1 -1 99 6 99 1 99 99 6 4 6 4 1 99 99 99 99 99 1P2 1DE4 1D1 1D2 1D3
+21 0 1 99 1 99 1 99 99 1 3 1 3 5 99 99 99 99 99 1P2 1DE4 1D1 1D2 1D3
+22 0 1 99 3 99 1 99 99 3 1 3 1 7 99 99 99 99 99 1P2 1DE4 1D1 1D2 1D3
+23 -2 -1 99 4 99 1 99 99 5 7 5 7 0 99 99 99 99 99 1P2 1DE4 1D1 1D2 1D3
+24 -2 -1 99 6 99 1 99 99 7 5 7 5 2 99 99 99 99 99 1P2 1DE4 1D1 1D2 1D3
+25 0 1 99 1 99 1 99 99 0 2 0 2 5 99 99 99 99 99 1P2 1DE4 1D1 1D2 1D3
+26 0 1 99 3 99 1 99 99 2 0 2 0 7 99 99 99 99 99 1P2 1DE4 1D1 1D2 1D3
+27 0 -1 99 3 0 0 99 99 99 99 99 99 99 1 3 3 1 7 1P1 1P2 1DE2 1DE4 1D1
+28 0 1 99 4 0 0 99 99 99 99 99 99 99 4 6 4 6 0 1P1 1P2 1DE2 1DE4 1D1
+29 0 1 99 6 0 0 99 99 99 99 99 99 99 4 6 4 6 2 1P1 1P2 1DE2 1DE4 1D1
+30 -6 -1 99 1 0 0 1 99 99 99 99 99 99 1 3 3 1 5 1P3 1P2 1DE2 1DE4 1D1
+31 -1 -1 99 3 0 0 1 99 99 99 99 99 99 1 3 3 1 7 1P3 1P2 1DE2 1DE4 1D1
+32 0 1 99 4 0 0 1 99 99 99 99 99 99 4 6 4 6 0 1P3 1P2 1DE2 1DE4 1D1
+33 0 1 99 6 0 0 1 99 99 99 99 99 99 4 6 4 6 2 1P3 1P2 1DE2 1DE4 1D1

@@ -1,0 +1,38 @@
+BODY {
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 8pt;
+	COLOR: #000000;
+	BACKGROUND-COLOR: #ffffff;
+}
+TABLE {
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 8pt;
+	COLOR: #000000;
+}
+
+A:link {
+	COLOR: #aeaea2;
+	TEXT-DECORATION: none;
+}
+A:visited {
+	COLOR: #aeaea2;
+	TEXT-DECORATION: none;
+}
+A:hover {
+	COLOR: #40755b;
+	TEXT-DECORATION: none;
+}
+A:active {
+	COLOR: #40755b;
+	TEXT-DECORATION: none;
+}
+
+.menu {
+
+
+}
+.menu {font-size: 13pt;}
+.pie {color: white;}
+.titulo {color: #40755b; font-weight: bold; font-size: 13pt;}
+.titulo2 {color: #40755b; font-weight: bold;}
+.titulo3 {color: #42afde; font-weight: bold; font-size: 12pt;}

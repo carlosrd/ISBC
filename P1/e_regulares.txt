@@ -1,0 +1,2 @@
+muy	pos	pos
+muy	neg	neg

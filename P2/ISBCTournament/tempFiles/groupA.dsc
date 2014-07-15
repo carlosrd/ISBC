@@ -1,0 +1,9 @@
+teamRocket t101118.EquipoActimel
+SkitHall t101115.SkitHall
+A-team t101113.equipoA
+Catenaccio t101108.Catenaccio
+G3RBT t101103.equipos.G3RBT
+SpTorrejon t101114.team.Team
+Chanantes t101102.Chanantes
+BroncosDeDenver t101112.BroncosDeDenver
+Voidmingham t101109.MyTeam

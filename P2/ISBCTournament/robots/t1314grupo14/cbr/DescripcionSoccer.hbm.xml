@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-lazy="false">
+<class name="t1314grupo14.cbr.DescripcionSoccer" table="soccer">
+
+	<id name="casoId" column="Id">
+
+	</id>
+	<property name="tiempoDePartido" column="tiempoDePartido"/>
+	<property name="golesRecibidos" column="golesRecibidos"/>
+	<property name="golesMarcados" column="golesMarcados"/>
+</class>
+</hibernate-mapping>

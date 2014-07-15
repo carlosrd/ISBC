@@ -1,0 +1,74 @@
+<TextFileConfiguration>
+	<FilePath>viviendas</FilePath>
+	<Delimiters>#</Delimiters>
+	<DescriptionClassName>jcolibri.test.recommenders.rec8.housesData.DescripcionVivienda</DescriptionClassName>
+	<DescriptionMappings>
+		<Map>id</Map>
+		<Map>titulo</Map>
+		<Map>localizacion</Map>
+		<Map>urlFoto</Map>	
+		<Map>url</Map>	
+		<Map>tipo</Map>
+		<Map>superficies</Map>
+		<Map>habitaciones</Map>
+		<Map>banios</Map>
+		<Map>estado</Map>
+		<Map>descripciones</Map>
+		<Map>coordenadas</Map>
+		<Map>precio</Map>
+		<Map>precioMedio</Map>
+		<Map>precioZona</Map>
+	</DescriptionMappings>
+
+<DescriptionClassName>jcolibri.test.recommenders.rec8.housesData.ExtrasFinca</DescriptionClassName>
+	<DescriptionMappings>
+		<Map>ascensor</Map>
+		<Map>trastero</Map>
+		<Map>energiaSolar</Map>
+		<Map>servPorteria</Map>
+		<Map>parkingComunitario</Map>
+		<Map>garajePrivado</Map>
+		<Map>videoportero</Map>
+	</DescriptionMappings>
+	
+<DescriptionClassName>jcolibri.test.recommenders.rec8.housesData.ExtrasBasicos</DescriptionClassName>
+	<DescriptionMappings>
+		<Map>lavadero</Map>
+		<Map>internet</Map>
+		<Map>microondas</Map>
+		<Map>horno</Map>
+		<Map>amueblado</Map>
+		<Map>cocinaOffice</Map>
+		<Map>parquet</Map>
+		<Map>domotica</Map>
+		<Map>armarios</Map>
+		<Map>tv</Map>
+		<Map>lavadora</Map>
+		<Map>electrodomesticos</Map>
+		<Map>suiteConBanio</Map>
+		<Map>puertaBlindada</Map>
+		<Map>gresCeramica</Map>
+		<Map>calefaccion</Map>
+		<Map>aireAcondicionado</Map>
+		<Map>nevera</Map>
+	</DescriptionMappings>
+	
+	<DescriptionClassName>jcolibri.test.recommenders.rec8.housesData.ExtrasOtros</DescriptionClassName>
+	<DescriptionMappings>
+		<Map>patio</Map>
+		<Map>balcon</Map>
+		<Map>zonaDeportiva</Map>
+		<Map>zonaComunitaria</Map>
+		<Map>terraza</Map>
+		<Map>piscinaComunitaria</Map>
+		<Map>jardinPrivado</Map>
+		<Map>zonaInfantil</Map>
+		<Map>piscina</Map>	
+	</DescriptionMappings>
+	
+	<SolutionClassName>jcolibri.test.recommenders.rec8.housesData.SolucionVivienda</SolutionClassName>
+	<SolutionMappings>
+		<Map>id</Map>
+		<Map>precio</Map>
+	</SolutionMappings>
+</TextFileConfiguration>

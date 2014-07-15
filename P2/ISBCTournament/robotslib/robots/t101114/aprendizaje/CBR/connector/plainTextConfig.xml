@@ -1,0 +1,20 @@
+<TextFileConfiguration>
+	<FilePath>t101114/aprendizaje/CBR/caseBase/casesEste.txt</FilePath>
+	<Delimiters>,</Delimiters>
+	<DescriptionClassName>t101114.aprendizaje.CBR.caseComponents.DescripcionCaso</DescriptionClassName>
+	<DescriptionMappings>
+		<Map>numPlayersEachOctant</Map>
+		<Map>ballPosition</Map>
+		<Map>time</Map>
+		<Map>ourGoals</Map>
+		<Map>theirGoals</Map>	
+	</DescriptionMappings>
+	<SolutionClassName>t101114.aprendizaje.CBR.caseComponents.SolucionCaso</SolutionClassName>
+	<SolutionMappings>
+		<Map>newState</Map>
+	</SolutionMappings>
+	<ResultClassName>t101114.aprendizaje.CBR.caseComponents.ResultadoCaso</ResultClassName>
+	<ResultMappings>
+		<Map>valoracionCaso</Map>
+	</ResultMappings>
+</TextFileConfiguration>

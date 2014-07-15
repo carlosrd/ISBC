@@ -1,0 +1,7 @@
+<DataBaseConfiguration>
+	<HibernateConfigFile>\\t1314grupo14\\cbr\\hibernate.cfg.xml</HibernateConfigFile>
+	<DescriptionMappingFile>\\t1314grupo14\\cbr\\DescripcionSoccer.hbm.xml</DescriptionMappingFile>
+	<DescriptionClassName>t1314grupo14.cbr.DescripcionSoccer</DescriptionClassName>
+	<SolutionMappingFile>..\\t1314grupo14\\cbr\\SolucionSoccer.hbm.xml</SolutionMappingFile>
+	<SolutionClassName>t1314grupo14.cbr.SolucionSoccer</SolutionClassName>
+</DataBaseConfiguration>

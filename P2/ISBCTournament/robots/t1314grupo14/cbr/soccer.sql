@@ -1,0 +1,20 @@
+create database soccer;
+use soccer;
+drop table soccer;
+create table soccer(Id VARCHAR(15), tiempoDePartido INTEGER, golesRecibidos INTEGER, golesMarcados INTEGER, jugador0 INTEGER, jugador1 INTEGER, jugador2 INTEGER, jugador3 INTEGER, jugador4 INTEGER);
+insert into soccer values('caso1',600,0,0,0,1,2,3,4);
+insert into soccer values('caso2',500,0,1,0,1,7,4,2);
+insert into soccer values('caso3',800,0,2,0,2,3,3,2);
+
+insert into soccer values('1394162716', 21258, 0, 0, 0, 1, 2, 3, 4);
+insert into soccer values('1394162797', 20118, 0, 0, 0, 1, 2, 3, 4);
+insert into soccer values('1394162803', 25920, 0, 1, 0, 1, 2, 3, 4);
+insert into soccer values('1394162834', 20155, 0, 0, 0, 1, 2, 3, 4);
+insert into soccer values('1394162870', 27545, 0, 1, 0, 1, 7, 4, 2);
+insert into soccer values('1394162880', 47905, 0, 1, 0, 1, 7, 4, 2);
+insert into soccer values('1394162884', 56695, 1, 2, 0, 1, 7, 4, 2);
+insert into soccer values('1394162894', 77035, 1, 2, 0, 2, 3, 3, 2);
+insert into soccer values('1394162905', 97355, 1, 2, 0, 2, 3, 3, 2);
+insert into soccer values('1394162915', 117675, 1, 2, 0, 2, 3, 3, 2);
+insert into soccer values('1394162966', 40300, 0, 0, 0, 1, 2, 3, 4);
+insert into soccer values('1394162977', 60660, 0, 0, 0, 1, 2, 3, 4);
