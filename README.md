@@ -1,9 +1,9 @@
-[ISBC] Engineering of Systems Based on Knowledge 
+[ISBC] Engineering of Knowledge-Based Systems
 ==
 
 ## General description
 
-Analysis of the inherent problems to concurrent programming in its two principal categories, *shared memory* and *message passing*. Primitives for concurrent programming. Interaction patterns in distributed programming. Languages ​​and formalisms for the specification and implementation of concurrent processes.
+Development of knowledge-based tools through concrete systems: Knowledge engineering skills, case based reasoning (CBR) systems, textual reasoning, ontologies, semantic reasoning, recommender systems, simulation environments and agent systems.
 
 ### Project 1 - Sentyment Analysis
 
