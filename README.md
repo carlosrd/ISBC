@@ -7,7 +7,7 @@ Development of knowledge-based tools through concrete systems: Knowledge enginee
 
 ### Project 1 - Sentyment Analysis
 
-* Text emotional analysis.
+* Text emotional analysis techniques.
 * Handle basic language processing techniques. (Stemming)
 * Handle web programming languages. (PHP) 
 * Using web APIs. (In this case: Twitter web API) 
@@ -43,7 +43,7 @@ El objetivo de la asignatura es conocer el proceso de desarrollo de los sistemas
 
 ### Proyecto 1 - Sentyment Analysis
 
-* Practicar técnicas de análisis emocional con textos.
+* Técnicas de análisis emocional con textos.
 * Manejar técnicas básicas de procesamiento del lenguaje. (Stemmer)
 * Aprender lenguajes de programación web. (PHP)
 * Uso de API's web. (Twitter en este caso)
@@ -56,7 +56,7 @@ Este proyecto precisa de la librería **jCOLIBRI** para funcionar correctamente.
 
 ### Proyecto 3 - Recomendador de viviendas
 
-* Aprender los conceptos de los sistemas recomendadores de productos y las diferencias con un sistema de recuperación
+* Conceptos de los sistemas recomendadores de productos y las diferencias con un sistema de recuperación
 * Aspectos básicos de uso de un framework como jCOLIBRI y del desarrollo de aplicaciones basado en ejemplos y plantillas.
 
 Este proyecto precisa de la librería **jCOLIBRI** para funcionar correctamente. (http://gaia.fdi.ucm.es/research/colibri/jcolibri)
