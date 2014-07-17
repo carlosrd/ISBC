@@ -37,7 +37,7 @@ This project requires **jCOLIBRI** library in order to work properly. (http://ga
 [ISBC] - Ingeniería de Sistemas Basados en Conocimiento
 ==
 
-## General description
+## Descripción general
 
 Procesos de desarrollo de los sistemas basados en el conocimiento a través de herramientas concretas. Se adquieren destrezas en ingeniería de conocimiento, sistemas de razonamiento basado en casos (CBR), sistemas de razonamiento textual, ontologías, razonamiento semántico, sistemas recomendadores, entornos de simulación y sistemas de agentes.
 
