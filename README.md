@@ -39,7 +39,7 @@ This project requires **jCOLIBRI** library in order to work properly. (http://ga
 
 ## General description
 
-El objetivo de la asignatura es conocer el proceso de desarrollo de los sistemas basados en el conocimiento a través de herramientas concretas. Se adquieren destrezas en ingeniería de conocimiento, sistemas de razonamiento basado en casos (CBR), sistemas de razonamiento textual, ontologías, razonamiento semántico, sistemas recomendadores, entornos de simulación y sistemas de agentes.
+Procesos de desarrollo de los sistemas basados en el conocimiento a través de herramientas concretas. Se adquieren destrezas en ingeniería de conocimiento, sistemas de razonamiento basado en casos (CBR), sistemas de razonamiento textual, ontologías, razonamiento semántico, sistemas recomendadores, entornos de simulación y sistemas de agentes.
 
 ### Proyecto 1 - Sentyment Analysis
 
